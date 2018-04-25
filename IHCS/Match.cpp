@@ -1,8 +1,11 @@
 #include "Match.h"
 
-Match::Match()
+Match::Match(string Lieu, Equipe Hote, Equipe invite)
 {
-    //ctor
+    this->Lieu = Lieu;
+    this->Hote = Hote;
+    this->invite = invite;
+
 }
 
 Match::~Match()
