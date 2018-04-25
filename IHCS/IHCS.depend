@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1524642856 source:d:\ndeux\genie log\ihcs\ihcs\equipe.cpp
+	"Equipe.h"
+
+1524642856 d:\ndeux\genie log\ihcs\ihcs\equipe.h
+
+1524642856 source:d:\ndeux\genie log\ihcs\ihcs\joueur.cpp
+	"Joueur.h"
+
+1524642856 d:\ndeux\genie log\ihcs\ihcs\joueur.h
+
+1524642856 source:d:\ndeux\genie log\ihcs\ihcs\main.cpp
+	<iostream>
+
+1524643924 source:d:\ndeux\genie log\ihcs\ihcs\championnat.cpp
+	"Championnat.h"
+
+1524644725 d:\ndeux\genie log\ihcs\ihcs\championnat.h
+	<list>
+	<string>
+	"Equipe.h"
+	"Match.h"
+
+1524644337 d:\ndeux\genie log\ihcs\ihcs\match.h
+	<string>
+	"Equipe.h"
+
+1524642856 source:d:\ndeux\genie log\ihcs\ihcs\match.cpp
+	"Match.h"
+

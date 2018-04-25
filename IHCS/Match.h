@@ -1,16 +1,16 @@
 #ifndef MATCH_H
 #define MATCH_H
 #include <string>
-#include <Equipe.h>
+#include "Equipe.h"
 
-using namespace std
+using namespace std;
 
 
 class Match
 {
     public:
-        Match();
-
+        Match(string Lieu, Equipe Hote, Equipe invite);
+        virtual ~Match();
 
         string Lieu;
         Equipe Hote;
