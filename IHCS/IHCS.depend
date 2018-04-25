@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1524579173 source:c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\championnat.cpp
+	"Championnat.h"
+
+1524640831 c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\championnat.h
+	<list>
+
+1524579199 source:c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\equipe.cpp
+	"Equipe.h"
+
+1524579199 c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\equipe.h
+
+1524579211 source:c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\joueur.cpp
+	"Joueur.h"
+
+1524579211 c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\joueur.h
+
+1446671344 source:c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\main.cpp
+	<iostream>
+

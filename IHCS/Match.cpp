@@ -8,7 +8,18 @@ Match::Match(string Lieu, Equipe Hote, Equipe invite)
 
 }
 
-Match::~Match()
+
+int Match::getScoreHote()
 {
-    //dtor
+    return scoreHote;
+}
+
+int Match::getScoreInvite()
+{
+    return scoreInvite;
+}
+
+bool Match::getFinMatch()
+{
+    return termine;
 }
