@@ -12,10 +12,10 @@
 1524642856 source:d:\ndeux\genie log\ihcs\ihcs\main.cpp
 	<iostream>
 
-1524643924 source:d:\ndeux\genie log\ihcs\ihcs\championnat.cpp
+1524673533 source:d:\ndeux\genie log\ihcs\ihcs\championnat.cpp
 	"Championnat.h"
 
-1524644725 d:\ndeux\genie log\ihcs\ihcs\championnat.h
+1524673346 d:\ndeux\genie log\ihcs\ihcs\championnat.h
 	<list>
 	<string>
 	"Equipe.h"

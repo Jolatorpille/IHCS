@@ -18,14 +18,15 @@ class Championnat
         void AgenderMatch();
         void jouerMatch(short,short);
         void reinitialiser();
-        void afficherEquipe();
+        void afficherEquipes();
         void AfficherMatchesJoues();
 
     protected:
 
     private:
         string nom;
-        list<Equipe> posdjc;
+        list<Equipe> listeEquipe;
+        list<Match> listeMatch;
 
 };
 
