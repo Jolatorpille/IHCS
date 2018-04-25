@@ -1,8 +1,8 @@
 #include "Championnat.h"
 
-Championnat::Championnat()
+Championnat::Championnat(string nom)
 {
-    //ctor
+    this->nom=nom;
 }
 
 Championnat::~Championnat()
