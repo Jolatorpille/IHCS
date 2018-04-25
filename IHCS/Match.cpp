@@ -8,7 +8,6 @@ Match::Match(string Lieu, Equipe Hote, Equipe invite)
 
 }
 
-
 int Match::getScoreHote()
 {
     return scoreHote;
@@ -23,3 +22,16 @@ bool Match::getFinMatch()
 {
     return termine;
 }
+void Match::setScoreHote(int scoreH)
+{
+    this->scoreHote = scoreH;
+}
+void Match::setScoreInvite(int scoreI)
+{
+    this->scoreInvite = scoreI;
+}
+void Match::setFinMatch(bool fin)
+{
+    this->termine = fin;
+}
+
