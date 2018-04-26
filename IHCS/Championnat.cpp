@@ -1,10 +1,12 @@
 #include "Championnat.h"
 #include <iostream>
+#include <iterator>
 
 Championnat::Championnat(string nom)
 {
     this->nom=nom;
 }
+
 
 Championnat::~Championnat()
 {
