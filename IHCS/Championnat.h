@@ -1,5 +1,6 @@
 #ifndef CHAMPIONNAT_H
 #define CHAMPIONNAT_H
+#include <list>
 
 
 class Championnat
