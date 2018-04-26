@@ -4,36 +4,50 @@
 #include "Match.h"
 #include "Equipe.h"
 #include "Joueur.h"
+#include <iomanip>
 
 using namespace std;
 
 int main()
 {
+
+    //JOUEURS
+
 	Joueur j1("Crosby", 96);
-	Joueur j2("Chara", 95);
+	Joueur j2("Kane", 95);
 	Joueur j3("Ovechkin", 94);
 	Joueur j4("Brodeur", 97);
 	Joueur j5("McDavid", 98);
-	Joueur j6("Hector", 89);
-	Joueur j7("Kane", 94);
-	Joueur j8("Patrick", 90);
-	Joueur j9("Alexander", 85);
-	Joueur j10("Coucou", 75);
-	Joueur j11("Matteo",0);
-	Joueur j12("AQueCoucou", 99);
-	Joueur j13("Dophin", 13);
-	Joueur j14("Adolph", 45);
-	Joueur j15("Trump", 66);
-	Joueur j16("Kopitar", 91);
-	Joueur j17("BobilaPointe", 56);
-	Joueur j18("Mäder", 1);
-	Joueur j19("Joker", 8);
+
+	Joueur j6("Kopitar", 93);
+	Joueur j7("Daughty", 90);
+	Joueur j8("Carter", 85);
+	Joueur j9("Quick", 92);
+	Joueur j10("Kempe", 88);
+
+	Joueur j11("Merkel",0);
+	Joueur j12("Poutine", 99);
+	Joueur j13("Macron", 13);
+	Joueur j14("Adolph", 80);
+	Joueur j15("Trump", 16);
+
+	Joueur j16("Durif", 14);
+	Joueur j17("BobylaPointe", 56);
+	Joueur j18("Mader", 1);
+	Joueur j19("Spiderman", 8);
 	Joueur j20("Batman", 50);
 
-	Equipe equipe1("Power Ranger",1);
-	Equipe equipe2("Pittsburg",2);
-	Equipe equipe3("Aboubakar",3);
-	Equipe equipe4("DarkNet", 4);
+
+
+	//EQUIPES
+
+	Equipe equipe1("POWER RANGERS",1);
+	Equipe equipe2("LA KINGS",2);
+	Equipe equipe3("DICTATOR",3);
+	Equipe equipe4("REPLTILIEN", 4);
+
+
+	//MERCATO
 
 
 	equipe1.Engager(j1);
@@ -60,10 +74,14 @@ int main()
 	equipe4.Engager(j19);
 	equipe4.Engager(j20);
 
-//	COUT << "EQUIPE 1 : " << EQUIPE1.GETNIVEAUEQUIPE() << ENDL;
-//	COUT << "EQUIPE 2 : " << EQUIPE2.GETNIVEAUEQUIPE() << ENDL;
-//	COUT << "EQUIPE 3 : " << EQUIPE3.GETNIVEAUEQUIPE() << ENDL;
-//	COUT << "EQUIPE 4 : " << EQUIPE4.GETNIVEAUEQUIPE() << ENDL;
+
+    equipe1.Afficher();
+	equipe2.Afficher();
+	equipe3.Afficher();
+	equipe4.Afficher();
+
+	//DEBUT CHAMPIONNAT
+
 
 	Championnat chpt1("IHCS");
 
@@ -72,14 +90,20 @@ int main()
 	chpt1.AjouterEquipe(equipe3);
 	chpt1.AjouterEquipe(equipe4);
 
+
+	//LISTE D'EQUIPES INSCRITES
+
+
 	chpt1.afficherEquipes();
 
+
+	//CALENDRIER DES MATCHES
+
 	chpt1.AgenderMatch();
-//	chpt1.AgenderMatch(m5);
-//	chpt1.AgenderMatch(m4);
-//	chpt1.AgenderMatch(m3);
-//	chpt1.AgenderMatch(m2);
-//	chpt1.AgenderMatch(m1);
+
+
+	//SIMULER MATCH
+
 
 	chpt1.jouerMatch(equipe1.ID,equipe2.ID);
 	chpt1.jouerMatch(equipe1.ID,equipe3.ID);
@@ -88,7 +112,20 @@ int main()
 	chpt1.jouerMatch(equipe2.ID,equipe4.ID);
 	chpt1.jouerMatch(equipe3.ID,equipe4.ID);
 
+
+	//RESULTAT DES MATCHES
+
+
 	chpt1.AfficherMatchesJoues();
+
+
+	//EFFACER EQUIPE DU CHAMPIONNAT
+
+
+	chpt1.reinitialiser();
+
+
+
 
 
 

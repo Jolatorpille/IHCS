@@ -1,8 +1,6 @@
 #include "Championnat.h"
 #include <iostream>
 #include <iterator>
-#include <time.h>
-#include <stdlib.h>
 
 Championnat::Championnat(string nom)
 {
@@ -35,15 +33,16 @@ void Championnat::AgenderMatch()
 {
     list<Equipe>::iterator it;
     list<Equipe>::iterator it2;
-    string s= "Match ";
+    list<Equipe>::iterator itTemp;
     int i=0;
-int j= 0;
+    int j= 0;
     for (it=listeEquipe.begin();it!=listeEquipe.end();it++)
         {
+
             i++;
-            it2=it;
-            it2++;
-            for(it2;it2!=listeEquipe.end();++it2)
+            itTemp=it;
+            itTemp++;
+            for(it2 = itTemp ; it2!=listeEquipe.end() ; ++it2)
             {
                 Match m("Match"+i,(*it),(*it2));
                 m.Lieu = tabLieu[j];
@@ -56,15 +55,16 @@ int j= 0;
 
 void Championnat::jouerMatch(short t1, short t2)
 {
-    srand (time(NULL));
+
 
     list<Match>::iterator it;
     for (it=listeMatch.begin();it!=listeMatch.end();it++)
     {
         if(it->Hote.ID==t2 && it->invite.ID==t1)
         {
-        it->setScoreHote(((it->Hote.getNiveauEquipe())*(it->Hote.getNiveauEquipe())*(it->invite.getNiveauEquipe()))/25000);
-        it->setScoreInvite(((it->invite.getNiveauEquipe())*(it->invite.getNiveauEquipe())*(it->Hote.getNiveauEquipe()))/10000);
+
+        it->setScoreHote(((it->Hote.getNiveauEquipe()*8)+(it->invite.getNiveauEquipe()*3))/120);
+        it->setScoreInvite(((it->invite.getNiveauEquipe()*8)+(it->Hote.getNiveauEquipe()*3))/120);
         it->setFinMatch();
         }
     }
@@ -80,11 +80,9 @@ void Championnat::afficherEquipes()
 {
     list<Equipe>::iterator it;
 
-    unsigned int i=0;
     for (it=listeEquipe.begin();it!=listeEquipe.end();it++)
         {
-            i++;
-            cout    <<  "Equipe "   <<  i   <<  " : " << it->nom <<endl;
+            cout    <<  "Equipe "   <<  it->ID   <<  " : " << it->nom <<endl;
         }
 }
 
@@ -97,9 +95,10 @@ void Championnat::AfficherMatchesJoues()
         {
 
             if(it->getFinMatch())
-                {
-                    cout << " Lieu de la rencontre : " << it->Lieu << endl;
-                    cout << it->Hote.nom <<" " << it->getScoreHote()<< " - " << it->getScoreInvite() << " " <<it->invite.nom<< endl;
+                {   cout << endl ;
+                    cout << "Lieu du match : " << it->Lieu << endl;
+                    cout << endl ;
+                    cout << it->Hote.nom <<"    " << it->getScoreHote()<< " - " << it->getScoreInvite() << "    " <<it->invite.nom<< endl;
                     cout << endl;
 
                 }

@@ -32,3 +32,7 @@ int Joueur::getNiveauJoueur()
 {
     return niveauJoueur;
 }
+string Joueur::getNom()
+{
+    return nom;
+}

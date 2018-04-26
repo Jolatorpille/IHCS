@@ -14,6 +14,7 @@ class Joueur
         void Afficher();
         //getter
         int getNiveauJoueur();
+        std::string getNom();
     protected:
 
     private:

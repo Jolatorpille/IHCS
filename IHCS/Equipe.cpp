@@ -1,6 +1,7 @@
 #include "Equipe.h"
 #include <iterator>
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 Equipe::Equipe()
@@ -39,9 +40,12 @@ void Equipe::Engager(Joueur &j)
 void Equipe::Afficher()
 {
     list <Joueur> :: iterator it;
+    cout << this->nom << " (Equipe " <<this->ID << ") :" << endl;
+    cout << endl;
     for(it = palmares.begin(); it != palmares.end(); ++it)
     {
-     cout << "coucou";
+
+        cout << "Nom du joueur : " << it->getNom() <<setfill(' ')<<setw(15)<< "   Aptitude : " << it->getNiveauJoueur() << endl;
     }
     cout << '\n';
 }
