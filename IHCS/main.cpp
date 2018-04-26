@@ -1,9 +1,13 @@
 #include <iostream>
+#include "Championnat.h"
+#include "Match.h"
+#include "Equipe.h"
+#include "Joueur.h"
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
+
     return 0;
 }
