@@ -9,7 +9,12 @@ using namespace std;
 class Match
 {
     public:
+
         Match(string,Equipe,Equipe);
+
+
+        Match(string Lieu, Equipe Hote, Equipe invite);
+        virtual ~Match();
 
 
         int getScoreHote();
