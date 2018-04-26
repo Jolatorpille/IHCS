@@ -13,10 +13,6 @@ class Match
         Match(string,Equipe,Equipe);
 
 
-        Match(string Lieu, Equipe Hote, Equipe invite);
-        virtual ~Match();
-
-
         int getScoreHote();
         int getScoreInvite();
         bool getFinMatch();
@@ -28,14 +24,6 @@ class Match
         Equipe Hote;
         Equipe invite;
 
-
-        int getScoreHote();
-        int getScoreInvite();
-        bool getFinMatch();
-
-        void setScoreHote(int);
-        void setScoreInvite(int);
-        void setFinMatch(bool);
 
     protected:
 

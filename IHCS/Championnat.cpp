@@ -13,13 +13,19 @@ Championnat::~Championnat()
     //dtor
 }
 
-void Championnat::AjouterEquipe()
+void Championnat::AjouterEquipe(Equipe e)
 {
-
+    this->listeEquipe.push_front(e);
 }
 
 void Championnat::AgenderMatch()
 {
+    list<Match>::iterator it;
+    list<Match>::iterator it2;
+    for (it=listeMatch.begin();it!=listeMatch.end();it++)
+        {
+
+        }
 
 }
 
@@ -38,7 +44,7 @@ void Championnat::afficherEquipes()
     list<Equipe>::iterator it;
 
     unsigned int i=0;
-for (it=listeEquipe.begin();it!=listeEquipe.end();i++)
+for (it=listeEquipe.begin();it!=listeEquipe.end();it++)
     {
         i++;
         cout    <<  "Equipe "   <<  i   <<  ":" << it->nom <<endl;
