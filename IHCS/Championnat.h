@@ -15,7 +15,7 @@ class Championnat
         virtual ~Championnat();
 
         void AjouterEquipe(Equipe);
-        void AgenderMatch();
+        void AgenderMatch(Match);
         void jouerMatch(short,short);
         void reinitialiser();
         void afficherEquipes();
