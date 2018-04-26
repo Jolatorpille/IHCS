@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1524580275 source:u:\17-18\02_mardi\04_genielogiciel\ihcs\ihcs\ihcs\championnat.cpp
+	"Championnat.h"
+
+1524580275 u:\17-18\02_mardi\04_genielogiciel\ihcs\ihcs\ihcs\championnat.h
+
+1524644059 source:u:\17-18\02_mardi\04_genielogiciel\ihcs\ihcs\ihcs\joueur.cpp
+	"Joueur.h"
+	<iostream>
+
+1524644097 u:\17-18\02_mardi\04_genielogiciel\ihcs\ihcs\ihcs\joueur.h
+	<string>
+
+1524580276 source:u:\17-18\02_mardi\04_genielogiciel\ihcs\ihcs\ihcs\main.cpp
+	<iostream>
+
+1524580276 source:u:\17-18\02_mardi\04_genielogiciel\ihcs\ihcs\ihcs\match.cpp
+	"Match.h"
+
+1524580276 u:\17-18\02_mardi\04_genielogiciel\ihcs\ihcs\ihcs\match.h
+
+1524643876 source:u:\17-18\02_mardi\04_genielogiciel\ihcs\ihcs\ihcs\equipe.cpp
+	"Equipe.h"
+	<iterator>
+	<iostream>
+
+1524643691 u:\17-18\02_mardi\04_genielogiciel\ihcs\ihcs\ihcs\equipe.h
+	<string>
+	<list>
+	"Joueur.h"
+
