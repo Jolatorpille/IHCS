@@ -12,6 +12,8 @@ class Joueur
         virtual ~Joueur();
         //méthodes
         void Afficher();
+        //getter
+        int getNiveauJoueur();
     protected:
 
     private:

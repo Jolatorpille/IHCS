@@ -18,7 +18,7 @@ class Match
         bool getFinMatch();
         void setScoreHote(int);
         void setScoreInvite(int);
-        void setFinMatch(bool);
+        void setFinMatch();
 
         string Lieu;
         Equipe Hote;

@@ -18,11 +18,14 @@ class Equipe
         std::string nom;
         std::list<Joueur> palmares;
         short ID;
+        //getter
+        int getNiveauEquipe();
     protected:
 
     private:
         //attributs
         int niveauEquipe;
+        int SommeNiveauEquipe;
 };
 
 #endif // EQUIPE_H

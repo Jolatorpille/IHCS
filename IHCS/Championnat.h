@@ -27,6 +27,7 @@ class Championnat
         string nom;
         list<Equipe> listeEquipe;
         list<Match> listeMatch;
+        string tabLieu[10];
 
 };
 

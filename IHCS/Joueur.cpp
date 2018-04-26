@@ -28,3 +28,7 @@ void Joueur::Afficher()
 {
     cout << "Nom : " << nom << '\t' << "Nombre de buts : " << NombreButs << '\t' << "Niveau du joueur : " << niveauJoueur << '\n';
 }
+int Joueur::getNiveauJoueur()
+{
+    return niveauJoueur;
+}

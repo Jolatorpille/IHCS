@@ -12,6 +12,7 @@ Equipe::Equipe(string _nom, short _ID)
 {
     this->nom = _nom;
     this->ID = _ID;
+    this->SommeNiveauEquipe = 0;
 }
 
 Equipe::~Equipe()
@@ -24,11 +25,15 @@ void Equipe::Engager(Joueur &j)
     if(palmares.size() < 6)
     {
         palmares.push_front(j);
+
     }
     else
     {
         palmares.push_back(j);
     }
+    SommeNiveauEquipe += j.getNiveauJoueur();
+    niveauEquipe = (SommeNiveauEquipe)/(palmares.size());
+
 }
 
 void Equipe::Afficher()
@@ -39,4 +44,8 @@ void Equipe::Afficher()
      cout << "coucou";
     }
     cout << '\n';
+}
+int Equipe::getNiveauEquipe()
+{
+    return niveauEquipe;
 }
