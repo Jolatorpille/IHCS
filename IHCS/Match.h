@@ -12,10 +12,17 @@ class Match
         Match(string,Equipe,Equipe);
 
 
+        int getScoreHote();
+        int getScoreInvite();
+        bool getFinMatch();
+        void setScoreHote(int);
+        void setScoreInvite(int);
+        void setFinMatch(bool);
 
         string Lieu;
         Equipe Hote;
         Equipe invite;
+
 
         int getScoreHote();
         int getScoreInvite();
@@ -24,6 +31,7 @@ class Match
         void setScoreHote(int);
         void setScoreInvite(int);
         void setFinMatch(bool);
+
     protected:
 
     private:
