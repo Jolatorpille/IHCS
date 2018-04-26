@@ -23,3 +23,15 @@ bool Match::getFinMatch()
 {
     return termine;
 }
+void Match::setScoreHote(int scorehote)
+{
+    this->scoreHote = scorehote;
+}
+void Match::setScoreInvite(int scoreinvite)
+{
+    this->scoreInvite = scoreInvite;
+}
+void Match::setFinMatch(bool fin)
+{
+    this->termine = fin;
+}

@@ -20,6 +20,10 @@ class Match
         int getScoreHote();
         int getScoreInvite();
         bool getFinMatch();
+
+        void setScoreHote(int);
+        void setScoreInvite(int);
+        void setFinMatch(bool);
     protected:
 
     private:
