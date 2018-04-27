@@ -24,7 +24,7 @@ Championnat::~Championnat()
     //dtor
 }
 
-void Championnat::AjouterEquipe(Equipe e)
+void Championnat::AjouterEquipe(Equipe &e)
 {
     this->listeEquipe.push_front(e);
 }
@@ -38,7 +38,6 @@ void Championnat::AgenderMatch()
     int j= 0;
     for (it=listeEquipe.begin();it!=listeEquipe.end();it++)
         {
-
             i++;
             itTemp=it;
             itTemp++;
@@ -56,18 +55,50 @@ void Championnat::AgenderMatch()
 void Championnat::jouerMatch(short t1, short t2)
 {
 
-
     list<Match>::iterator it;
     for (it=listeMatch.begin();it!=listeMatch.end();it++)
     {
-        if(it->Hote.ID==t2 && it->invite.ID==t1)
+        if(it->Hote->ID==t2 && it->invite->ID==t1)
         {
 
-        it->setScoreHote(((it->Hote.getNiveauEquipe()*8)+(it->invite.getNiveauEquipe()*3))/120);
-        it->setScoreInvite(((it->invite.getNiveauEquipe()*8)+(it->Hote.getNiveauEquipe()*3))/120);
+        it->setScoreHote(((it->Hote->getNiveauEquipe()*8)+(it->invite->getNiveauEquipe()*3))/120);
+        it->setScoreInvite(((it->invite->getNiveauEquipe()*8)+(it->Hote->getNiveauEquipe()*3))/120);
         it->setFinMatch();
+
+        computeClassement(*it);
+
+
         }
+
     }
+
+
+}
+void Championnat::computeClassement(Match &m)
+{
+
+    int delta = (m.getScoreHote()- m.getScoreInvite());
+
+    cout << "delta : " << delta << endl;
+
+    if(delta > 0)
+    {
+
+        m.Hote->setPointEquipe(m.Hote->getPointEquipe()+3);
+        m.invite->setPointEquipe(m.invite->getPointEquipe()+0);
+
+    }
+    else if(delta == 0)
+    {
+        m.Hote->setPointEquipe(m.Hote->getPointEquipe()+1);
+        m.invite->setPointEquipe(m.invite->getPointEquipe()+1);
+    }
+    else
+    {
+        m.Hote->setPointEquipe(m.Hote->getPointEquipe()+0);
+        m.invite->setPointEquipe(m.invite->getPointEquipe()+3);
+    }
+
 }
 
 void Championnat::reinitialiser()
@@ -87,7 +118,7 @@ void Championnat::afficherEquipes()
 }
 
 
-void Championnat::AfficherMatchesJoues()
+void Championnat::afficherMatchesJoues()
 {
     list<Match>::iterator it;
 
@@ -98,10 +129,20 @@ void Championnat::AfficherMatchesJoues()
                 {   cout << endl ;
                     cout << "Lieu du match : " << it->Lieu << endl;
                     cout << endl ;
-                    cout << it->Hote.nom <<"    " << it->getScoreHote()<< " - " << it->getScoreInvite() << "    " <<it->invite.nom<< endl;
+                    cout << it->Hote->nom <<"    " << it->getScoreHote()<< " - " << it->getScoreInvite() << "    " <<it->invite->nom<< endl;
                     cout << endl;
 
                 }
         }
 
+}
+void Championnat::afficherClassement()
+{
+    cout << "Classement du championnat " << this->nom << ":" << endl;
+    cout << endl;
+    list<Equipe>::iterator it;
+    for(it = listeEquipe.begin();it!=listeEquipe.end();it++)
+    {
+        cout << it->nom << " : " << it->getPointEquipe()<<endl;
+    }
 }

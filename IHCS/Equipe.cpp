@@ -14,6 +14,7 @@ Equipe::Equipe(string _nom, short _ID)
     this->nom = _nom;
     this->ID = _ID;
     this->SommeNiveauEquipe = 0;
+    this->PointEquipe =0;
 }
 
 Equipe::~Equipe()

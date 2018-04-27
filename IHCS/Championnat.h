@@ -14,16 +14,22 @@ class Championnat
         Championnat(string);
         virtual ~Championnat();
 
-        void AjouterEquipe(Equipe);
+        void AjouterEquipe(Equipe&);
         void AgenderMatch();
         void jouerMatch(short,short);
         void reinitialiser();
         void afficherEquipes();
-        void AfficherMatchesJoues();
+        void afficherMatchesJoues();
+        void afficherClassement();
+
+
 
     protected:
 
     private:
+
+        void computeClassement(Match&);
+
         string nom;
         list<Equipe> listeEquipe;
         list<Match> listeMatch;

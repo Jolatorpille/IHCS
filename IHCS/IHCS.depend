@@ -1,10 +1,11 @@
 # depslib dependency file v1.0
-1524776808 source:c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\equipe.cpp
+1524827370 source:c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\equipe.cpp
 	"Equipe.h"
 	<iterator>
 	<iostream>
+	<iomanip>
 
-1524821575 c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\equipe.h
+1524826044 c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\equipe.h
 	<string>
 	<list>
 	"Joueur.h"
@@ -16,7 +17,7 @@
 	"Joueur.h"
 	<iostream>
 
-1524777452 source:c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\main.cpp
+1524824644 source:c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\main.cpp
 	<iostream>
 	<string>
 	"Championnat.h"
@@ -25,20 +26,20 @@
 	"Joueur.h"
 	<iomanip>
 
-1524764741 c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\championnat.h
+1524832406 c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\championnat.h
 	<list>
 	<string>
 	"Equipe.h"
 	"Match.h"
 
-1524763195 c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\match.h
+1524833836 c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\match.h
 	<string>
 	"Equipe.h"
 
-1524766185 source:c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\match.cpp
+1524834526 source:c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\match.cpp
 	"Match.h"
 
-1524776007 source:c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\championnat.cpp
+1524834606 source:c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\championnat.cpp
 	"Championnat.h"
 	<iostream>
 	<iterator>

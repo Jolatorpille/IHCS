@@ -8,6 +8,7 @@
 
 using namespace std;
 
+
 int main()
 {
 
@@ -116,19 +117,16 @@ int main()
 	//RESULTAT DES MATCHES
 
 
-	chpt1.AfficherMatchesJoues();
+	chpt1.afficherMatchesJoues();
+
+	//AFFICHAGE CLASSEMENT
+	chpt1.afficherClassement();
 
 
 	//EFFACER EQUIPE DU CHAMPIONNAT
 
 
 	chpt1.reinitialiser();
-
-
-
-
-
-
-
     return 0;
 }
+

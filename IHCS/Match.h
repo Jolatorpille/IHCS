@@ -10,7 +10,7 @@ class Match
 {
     public:
 
-        Match(string,Equipe,Equipe);
+        Match(string,Equipe&,Equipe&);
 
 
         int getScoreHote();
@@ -21,8 +21,8 @@ class Match
         void setFinMatch();
 
         string Lieu;
-        Equipe Hote;
-        Equipe invite;
+        Equipe *Hote;
+        Equipe *invite;
 
 
     protected:
