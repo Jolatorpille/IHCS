@@ -80,8 +80,6 @@ void Championnat::computeClassement(Match &m)
 
     int delta = (m.getScoreHote()- m.getScoreInvite());
 
-    cout << "delta : " << delta << endl;
-
     if(delta > 0)
     {
 
@@ -139,6 +137,7 @@ void Championnat::afficherMatchesJoues()
 }
 void Championnat::afficherClassement()
 {
+
     cout << "Classement du championnat " << this->nom << ":" << endl;
     cout << endl;
     list<Equipe>::iterator it;
@@ -146,4 +145,5 @@ void Championnat::afficherClassement()
     {
         cout << it->nom << " : " << it->getPointEquipe()<<endl;
     }
+    cout << endl;
 }

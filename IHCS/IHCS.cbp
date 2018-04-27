@@ -41,6 +41,8 @@
 		<Unit filename="Match.cpp" />
 		<Unit filename="Match.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="tools.cpp" />
+		<Unit filename="tools.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

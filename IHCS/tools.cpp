@@ -10,3 +10,8 @@ double tools::RandomScore(int niveau)
 {
     return (int)((niveau/(double)10)*(rand()/(double)RAND_MAX));
 }
+
+//bool tools::comp(int a, int b)
+//{
+//    return (a>b);
+//}
