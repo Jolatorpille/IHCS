@@ -23,17 +23,17 @@ Equipe::~Equipe()
 
 void Equipe::Engager(Joueur &j)
 {
-    if(palmares.size() < 6)
+    if(listeJoueur.size() < 6)
     {
-        palmares.push_front(j);
+        listeJoueur.push_front(j);
 
     }
     else
     {
-        palmares.push_back(j);
+        listeJoueur.push_back(j);
     }
     SommeNiveauEquipe += j.getNiveauJoueur();
-    niveauEquipe = (SommeNiveauEquipe)/(palmares.size());
+    niveauEquipe = (SommeNiveauEquipe)/(listeJoueur.size());
 
 }
 
@@ -42,7 +42,7 @@ void Equipe::Afficher()
     list <Joueur> :: iterator it;
     cout << this->nom << " (Equipe " <<this->ID << ") :" << endl;
     cout << endl;
-    for(it = palmares.begin(); it != palmares.end(); ++it)
+    for(it = listeJoueur.begin(); it != listeJoueur.end(); ++it)
     {
 
         cout << "Nom du joueur : " << it->getNom() <<setfill(' ')<<setw(15)<< "   Aptitude : " << it->getNiveauJoueur() << endl;
@@ -52,4 +52,12 @@ void Equipe::Afficher()
 int Equipe::getNiveauEquipe()
 {
     return niveauEquipe;
+}
+int Equipe::getPointEquipe()
+{
+    return PointEquipe;
+}
+void Equipe::setPointEquipe(int point)
+{
+    this->PointEquipe = point;
 }
