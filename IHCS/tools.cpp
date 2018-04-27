@@ -1,4 +1,5 @@
 #include "tools.h"
+#include <stdlib.h>
 
 //---------------------------------------------
 //Permet d'avoir un nombre en 0 et 10

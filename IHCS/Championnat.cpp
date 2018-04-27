@@ -1,6 +1,7 @@
 #include "Championnat.h"
 #include <iostream>
 #include <iterator>
+#include "tools.h"
 
 Championnat::Championnat(string nom)
 {
@@ -61,8 +62,8 @@ void Championnat::jouerMatch(short t1, short t2)
         if(it->Hote->ID==t2 && it->invite->ID==t1)
         {
 
-        it->setScoreHote(((it->Hote->getNiveauEquipe()*8)+(it->invite->getNiveauEquipe()*3))/120);
-        it->setScoreInvite(((it->invite->getNiveauEquipe()*8)+(it->Hote->getNiveauEquipe()*3))/120);
+        it->setScoreHote(tools::RandomScore(it->Hote->getNiveauEquipe()));  //((it->Hote->getNiveauEquipe()*8)+(it->invite->getNiveauEquipe()*3))/120
+        it->setScoreInvite(tools::RandomScore(it->invite->getNiveauEquipe())); //((it->invite->getNiveauEquipe()*8)+(it->Hote->getNiveauEquipe()*3))/120
         it->setFinMatch();
 
         computeClassement(*it);
