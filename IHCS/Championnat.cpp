@@ -27,7 +27,16 @@ Championnat::~Championnat()
 
 void Championnat::AjouterEquipe(Equipe &e)
 {
-    this->listeEquipe.push_front(e);
+    if (e.listeJoueur.size()== 5)
+    {
+       this->listeEquipe.push_front(e);
+    }
+    else
+    {   cout << endl;
+        cout << "Nombre de joueurs non reglementaire dans "<< e.nom << endl;
+        cout << endl;
+    }
+
 }
 
 void Championnat::AgenderMatch()
@@ -50,18 +59,19 @@ void Championnat::AgenderMatch()
                 j++;
             }
 
+
         }
 }
 
 void Championnat::jouerMatch(short t1, short t2)
 {
 
+
     list<Match>::iterator it;
     for (it=listeMatch.begin();it!=listeMatch.end();it++)
     {
-        if(it->Hote->ID==t2 && it->invite->ID==t1)
+        if((it->Hote->ID==t1 && it->invite->ID==t2)||(it->Hote->ID==t2 && it->invite->ID==t1))
         {
-
         it->setScoreHote(tools::RandomScore(it->Hote->getNiveauEquipe()));  //((it->Hote->getNiveauEquipe()*8)+(it->invite->getNiveauEquipe()*3))/120
         it->setScoreInvite(tools::RandomScore(it->invite->getNiveauEquipe())); //((it->invite->getNiveauEquipe()*8)+(it->Hote->getNiveauEquipe()*3))/120
         it->setFinMatch();
@@ -110,6 +120,8 @@ void Championnat::afficherEquipes()
 {
     list<Equipe>::iterator it;
 
+    cout << endl;
+    cout << "Equipes inscrites au championnat IHCS" <<endl;
     for (it=listeEquipe.begin();it!=listeEquipe.end();it++)
         {
             cout    <<  "Equipe "   <<  it->ID   <<  " : " << it->nom <<endl;
@@ -142,9 +154,11 @@ void Championnat::afficherClassement()
     cout << "Classement du championnat " << this->nom << ":" << endl;
     cout << endl;
     list<Equipe>::iterator it;
+    int i=1;
     for(it = listeEquipe.begin();it!=listeEquipe.end();it++)
     {
-        cout << it->nom << " : " << it->getPointEquipe()<<endl;
+        cout << i <<" : " <<it->nom << " : " << it->getPointEquipe()<<endl;
+        i++;
     }
     cout << endl;
 }

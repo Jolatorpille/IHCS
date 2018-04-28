@@ -41,7 +41,7 @@ void Equipe::Engager(Joueur &j)
 void Equipe::Afficher()
 {
     list <Joueur> :: iterator it;
-    cout << this->nom << " (Equipe " <<this->ID << ") :" << endl;
+    cout << this->nom << " (Equipe " <<this->ID << ")" << "       Aptitude d'equipe : "<< this->getNiveauEquipe() << endl;
     cout << endl;
     for(it = listeJoueur.begin(); it != listeJoueur.end(); ++it)
     {
