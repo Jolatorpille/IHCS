@@ -39,16 +39,18 @@
 1524834526 source:c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\match.cpp
 	"Match.h"
 
-1524837985 source:c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\championnat.cpp
+1524930101 source:c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\championnat.cpp
 	"Championnat.h"
 	<iostream>
 	<iterator>
 	"tools.h"
 
-1524834958 c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\tools.h
+1524929920 c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\tools.h
+	"Equipe.h"
 	<iostream>
+	<list>
 
-1524838061 source:c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\tools.cpp
+1524930059 source:c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\tools.cpp
 	"tools.h"
 	<stdlib.h>
 

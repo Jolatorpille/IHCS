@@ -1,5 +1,6 @@
 #ifndef TOOLS_H
 #define TOOLS_H
+#include "Equipe.h"
 
 #include <iostream>
 #include <list>
@@ -9,7 +10,7 @@ class tools
 {
     public:
         static double RandomScore(int niveau);
-        //static bool comp(int,int);
+        static bool Compare(Equipe First, Equipe Next);
 };
 
 #endif // TOOLS_H

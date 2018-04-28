@@ -137,6 +137,7 @@ void Championnat::afficherMatchesJoues()
 }
 void Championnat::afficherClassement()
 {
+    listeEquipe.sort(tools::Compare);
 
     cout << "Classement du championnat " << this->nom << ":" << endl;
     cout << endl;
