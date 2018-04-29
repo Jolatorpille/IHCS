@@ -39,7 +39,7 @@
 1524834526 source:c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\match.cpp
 	"Match.h"
 
-1524933512 source:c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\championnat.cpp
+1524933769 source:c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\championnat.cpp
 	"Championnat.h"
 	<iostream>
 	<iterator>
