@@ -9,6 +9,7 @@ Joueur::Joueur()
 Joueur::Joueur(string _nom, int niveau)
 {
     nom = _nom;
+    IsFree = true;
     if(niveau > 100)
     {
         niveauJoueur = 100;
@@ -35,4 +36,14 @@ int Joueur::getNiveauJoueur()
 string Joueur::getNom()
 {
     return nom;
+}
+
+bool Joueur::getIsFree()
+{
+    return IsFree;
+}
+
+void Joueur::setIsFree(bool status)
+{
+    IsFree = status;
 }
