@@ -12,6 +12,7 @@ class Championnat
 {
     public:
         Championnat(string);
+        Championnat(string,string &);
         virtual ~Championnat();
 
         void AjouterEquipe(Equipe&);
