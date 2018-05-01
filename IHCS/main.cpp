@@ -90,19 +90,19 @@ int main()
 
 	//DEBUT CHAMPIONNAT
 
-	string tabLieu[10];
-	tabLieu[0]="CDF";
-    tabLieu[1]="Neuch";
-    tabLieu[2]="Morteau";
-    tabLieu[3]="Villers-le-lac";
-    tabLieu[4]="Pontarlier";
-    tabLieu[5]="Besancon";
-    tabLieu[6]="Sagne";
-    tabLieu[7]="Brevine";
-    tabLieu[8]="Sonbeval";
-    tabLieu[9]="Cul-des-pres";
+	int nbDeLieu =6;
 
-	Championnat chpt1("IHCS",*tabLieu);
+	string tabLieu[nbDeLieu];
+
+	tabLieu[0]="PARIS";
+    tabLieu[1]="ROME";
+    tabLieu[2]="BERNE";
+    tabLieu[3]="LONDRES";
+    tabLieu[4]="MOSCOU";
+    tabLieu[5]="TOKYO";
+
+
+	Championnat chpt1("IHCS",tabLieu,nbDeLieu);
 
 	chpt1.AjouterEquipe(equipe1);
 	chpt1.AjouterEquipe(equipe2);

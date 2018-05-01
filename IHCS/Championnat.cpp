@@ -18,11 +18,16 @@ Championnat::Championnat(string nom)
     tabLieu[8]="Sonbeval";
     tabLieu[9]="Cul-des-pres";
 }
-Championnat::Championnat(string nom,string &lieu)
+Championnat::Championnat(string nom,string lieu[],int nbDeLieu)
 {
     this->nom=nom;
 
-    *tabLieu = lieu;
+    for(int i = 0 ; i < nbDeLieu ; i++)
+    {
+        *(tabLieu+i) = lieu[i];
+    }
+
+
 }
 
 Championnat::~Championnat()
