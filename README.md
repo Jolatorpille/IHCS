@@ -2,7 +2,7 @@ Génie Logiciel
 Baldi Matteo, Arfa Hakim, Matthey Johan  
 INF2IIE-a  
 
-##IHCS
+## IHCS
 
 Ce projet consiste à simuler un championnat de Hockey.
 
