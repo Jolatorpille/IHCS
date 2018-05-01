@@ -56,6 +56,7 @@ int main()
 
 	equipe1.Engager(j1);
 
+	equipe5.Engager(j1);
 	equipe5.Engager(j2);
 	equipe5.Engager(j3);
 	equipe5.Engager(j4);

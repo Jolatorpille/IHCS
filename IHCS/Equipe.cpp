@@ -2,6 +2,7 @@
 #include <iterator>
 #include <iostream>
 #include <iomanip>
+#include "tools.h"
 using namespace std;
 
 Equipe::Equipe()
@@ -40,12 +41,14 @@ void Equipe::Engager(Joueur &j)
     }
     else
     {
-        cout << "Le joueur : " << j.getNom() << " est deja dans une autre equipe";
+        cout << j.getNom() << " est deja dans une autre equipe. " << endl;
+       cout << endl;
     }
 }
 
 void Equipe::Afficher()
 {
+    tools::afficherSeparation();
     list <Joueur> :: iterator it;
     cout << this->nom << " (Equipe " <<this->ID << ")" << "       Aptitude d'equipe : "<< this->getNiveauEquipe() << endl;
     cout << endl;
@@ -55,6 +58,7 @@ void Equipe::Afficher()
         cout << "Nom du joueur : " << it->getNom() <<setfill(' ')<<setw(15)<< "   Aptitude : " << it->getNiveauJoueur() << endl;
     }
     cout << '\n';
+    tools::afficherSeparation();
 }
 int Equipe::getNiveauEquipe()
 {

@@ -128,19 +128,23 @@ void Championnat::reinitialiser()
 
 void Championnat::afficherEquipes()
 {
+    tools::afficherSeparation();
     list<Equipe>::iterator it;
 
     cout << endl;
     cout << "Equipes inscrites au championnat IHCS" <<endl;
+    cout << endl;
     for (it=listeEquipe.begin();it!=listeEquipe.end();it++)
         {
             cout    <<  "Equipe "   <<  it->ID   <<  " : " << it->nom <<endl;
         }
+    tools::afficherSeparation();
 }
 
 
 void Championnat::afficherMatchesJoues()
 {
+    tools::afficherSeparation();
     list<Match>::iterator it;
 
     for (it=listeMatch.begin(); it!=listeMatch.end(); it++)
@@ -155,10 +159,12 @@ void Championnat::afficherMatchesJoues()
 
                 }
         }
+        tools::afficherSeparation();
 
 }
 void Championnat::afficherClassement()
 {
+    tools::afficherSeparation();
     listeEquipe.sort(tools::Compare);
 
     cout << "Classement du championnat " << this->nom << ":" << endl;
@@ -171,4 +177,5 @@ void Championnat::afficherClassement()
         i++;
     }
     cout << endl;
+    tools::afficherSeparation();
 }

@@ -33,7 +33,7 @@ class Championnat
         string nom;
         list<Equipe> listeEquipe;
         list<Match> listeMatch;
-        string tabLieu[100];
+        string tabLieu[20];
 
 };
 
