@@ -12,8 +12,11 @@ class Joueur
         virtual ~Joueur();
         //méthodes
         void Afficher();
+        void setIsFree(bool status);
         //getter
         int getNiveauJoueur();
+        bool getIsFree();
+
         std::string getNom();
     protected:
 
@@ -21,6 +24,7 @@ class Joueur
         std::string nom;
         int NombreButs;
         int niveauJoueur;
+        bool IsFree;
 };
 
 #endif // JOUEUR_H

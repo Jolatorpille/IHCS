@@ -24,18 +24,24 @@ Equipe::~Equipe()
 
 void Equipe::Engager(Joueur &j)
 {
-    if(listeJoueur.size() < 6)
-    {
-        listeJoueur.push_front(j);
-
+   if(j.getIsFree())
+   {
+        if(listeJoueur.size() < 6)
+        {
+            listeJoueur.push_front(j);
+        }
+        else
+        {
+            listeJoueur.push_back(j);
+        }
+        j.setIsFree(false);
+        SommeNiveauEquipe += j.getNiveauJoueur();
+        niveauEquipe = (SommeNiveauEquipe)/(listeJoueur.size());
     }
     else
     {
-        listeJoueur.push_back(j);
+        cout << "Le joueur : " << j.getNom() << " est deja dans une autre equipe";
     }
-    SommeNiveauEquipe += j.getNiveauJoueur();
-    niveauEquipe = (SommeNiveauEquipe)/(listeJoueur.size());
-
 }
 
 void Equipe::Afficher()
