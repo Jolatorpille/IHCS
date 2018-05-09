@@ -163,6 +163,11 @@ void Championnat::afficherClassement()
     for(it = listeEquipe.begin();it!=listeEquipe.end();it++)
     {
         cout << i <<" : " <<it->nom << " : " << it->getPointEquipe()<<endl;
+        if (i==1)
+        {
+            it->palmares.push_front(this->nom);
+        }
+
         i++;
     }
     cout << endl;

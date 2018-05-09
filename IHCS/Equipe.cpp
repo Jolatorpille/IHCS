@@ -50,6 +50,20 @@ void Equipe::Afficher()
     }
     cout << '\n';
 }
+
+void Equipe::AfficherPalmares()
+{
+    list<string>::iterator it;
+    cout<< "Victoire de l'equipe " << this->nom << ": " << endl;
+    int i =1;
+    for(it = palmares.begin();it!=palmares.end();it++)
+    {
+        cout<< i << ") " << *it<<endl ; //todo
+        i++;
+
+    }
+}
+
 int Equipe::getNiveauEquipe()
 {
     return niveauEquipe;
