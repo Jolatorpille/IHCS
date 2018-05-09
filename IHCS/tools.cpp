@@ -1,5 +1,8 @@
 #include "tools.h"
 #include <stdlib.h>
+#include <iomanip>
+
+using namespace std;
 
 //---------------------------------------------
 //Permet d'avoir un nombre en 0 et 10
@@ -16,4 +19,8 @@ bool tools::Compare(Equipe First, Equipe Next)
 
     return First.getPointEquipe()>=Next.getPointEquipe();
 
+}
+void tools::afficherSeparation()
+{
+    cout << "========================================================"<< endl;
 }

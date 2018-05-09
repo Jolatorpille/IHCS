@@ -1,0 +1,113 @@
+# depslib dependency file v1.0
+1525191627 source:c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\equipe.cpp
+	"Equipe.h"
+	<iterator>
+	<iostream>
+	<iomanip>
+	"tools.h"
+
+1524826044 c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\equipe.h
+	<string>
+	<list>
+	"Joueur.h"
+
+1525190914 c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\joueur.h
+	<string>
+
+1525190914 source:c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\joueur.cpp
+	"Joueur.h"
+	<iostream>
+
+1525191302 source:c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\main.cpp
+	<iostream>
+	<string>
+	"Championnat.h"
+	"Match.h"
+	"Equipe.h"
+	"Joueur.h"
+	<iomanip>
+
+1525191360 c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\championnat.h
+	<list>
+	<string>
+	"Equipe.h"
+	"Match.h"
+
+1524833836 c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\match.h
+	<string>
+	"Equipe.h"
+
+1524834526 source:c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\match.cpp
+	"Match.h"
+
+1525191831 source:c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\championnat.cpp
+	"Championnat.h"
+	<iostream>
+	<iterator>
+	"tools.h"
+
+1525191649 c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\tools.h
+	"Equipe.h"
+	<iostream>
+	<list>
+
+1525191757 source:c:\users\johan.matthey\bureau\he-arc\2ndyear\genie_logiciel\ihcs\ihcs\tools.cpp
+	"tools.h"
+	<stdlib.h>
+	<iomanip>
+
+1525087148 source:d:\ndeux\genie log\ihcs\ihcs\championnat.cpp
+	"Championnat.h"
+	<iostream>
+	<iterator>
+	"tools.h"
+
+1525086977 d:\ndeux\genie log\ihcs\ihcs\championnat.h
+	<list>
+	<string>
+	"Equipe.h"
+	"Match.h"
+
+1525010696 d:\ndeux\genie log\ihcs\ihcs\equipe.h
+	<string>
+	<list>
+	"Joueur.h"
+
+1525010697 d:\ndeux\genie log\ihcs\ihcs\joueur.h
+	<string>
+
+1525010697 d:\ndeux\genie log\ihcs\ihcs\match.h
+	<string>
+	"Equipe.h"
+
+1525010697 d:\ndeux\genie log\ihcs\ihcs\tools.h
+	"Equipe.h"
+	<iostream>
+	<list>
+
+1525010696 source:d:\ndeux\genie log\ihcs\ihcs\equipe.cpp
+	"Equipe.h"
+	<iterator>
+	<iostream>
+	<iomanip>
+
+1525010696 source:d:\ndeux\genie log\ihcs\ihcs\joueur.cpp
+	"Joueur.h"
+	<iostream>
+
+1525010697 source:d:\ndeux\genie log\ihcs\ihcs\match.cpp
+	"Match.h"
+
+1525010697 source:d:\ndeux\genie log\ihcs\ihcs\tools.cpp
+	"tools.h"
+	<stdlib.h>
+
+1525027558 source:d:\ndeux\genie log\ihcs\ihcs\main.cpp
+	<iostream>
+	<string>
+	"Championnat.h"
+	"Match.h"
+	"Equipe.h"
+	"Joueur.h"
+	<iomanip>
+

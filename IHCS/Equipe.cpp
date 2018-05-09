@@ -2,6 +2,7 @@
 #include <iterator>
 #include <iostream>
 #include <iomanip>
+#include "tools.h"
 using namespace std;
 
 Equipe::Equipe()
@@ -24,22 +25,30 @@ Equipe::~Equipe()
 
 void Equipe::Engager(Joueur &j)
 {
-    if(listeJoueur.size() < 6)
-    {
-        listeJoueur.push_front(j);
-
+   if(j.getIsFree())
+   {
+        if(listeJoueur.size() < 6)
+        {
+            listeJoueur.push_front(j);
+        }
+        else
+        {
+            listeJoueur.push_back(j);
+        }
+        j.setIsFree(false);
+        SommeNiveauEquipe += j.getNiveauJoueur();
+        niveauEquipe = (SommeNiveauEquipe)/(listeJoueur.size());
     }
     else
     {
-        listeJoueur.push_back(j);
+        cout << j.getNom() << " est deja dans une autre equipe. " << endl;
+       cout << endl;
     }
-    SommeNiveauEquipe += j.getNiveauJoueur();
-    niveauEquipe = (SommeNiveauEquipe)/(listeJoueur.size());
-
 }
 
 void Equipe::Afficher()
 {
+    tools::afficherSeparation();
     list <Joueur> :: iterator it;
     cout << this->nom << " (Equipe " <<this->ID << ")" << "       Aptitude d'equipe : "<< this->getNiveauEquipe() << endl;
     cout << endl;
@@ -49,6 +58,7 @@ void Equipe::Afficher()
         cout << "Nom du joueur : " << it->getNom() <<setfill(' ')<<setw(15)<< "   Aptitude : " << it->getNiveauJoueur() << endl;
     }
     cout << '\n';
+    tools::afficherSeparation();
 }
 
 void Equipe::AfficherPalmares()
