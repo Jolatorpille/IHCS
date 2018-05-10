@@ -16,6 +16,7 @@ Equipe::Equipe(string _nom, short _ID)
     this->ID = _ID;
     this->SommeNiveauEquipe = 0;
     this->PointEquipe =0;
+
 }
 
 Equipe::~Equipe()
@@ -63,15 +64,26 @@ void Equipe::Afficher()
 
 void Equipe::AfficherPalmares()
 {
+    tools::afficherSeparation();
     list<string>::iterator it;
-    cout<< "Victoire de l'equipe " << this->nom << ": " << endl;
     int i =1;
-    for(it = palmares.begin();it!=palmares.end();it++)
-    {
-        cout<< i << ") " << *it<<endl ; //todo
-        i++;
 
-    }
+    cout << this->nom << endl;
+    if(this->palmares.size()== 0)
+        {
+            cout <<  "Aucun championnat remporte. " << endl;
+        }
+    else
+        {
+
+            cout<< "Liste des chamionnats remportes "<< ": " << endl;
+        for(it = palmares.begin();it!=palmares.end();it++)
+            {
+            cout<< i << ") " << *it <<endl ;
+            i++;
+            }
+        }
+        tools::afficherSeparation();
 }
 
 int Equipe::getNiveauEquipe()

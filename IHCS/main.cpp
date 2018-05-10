@@ -124,8 +124,6 @@ int main()
 
 
 	//SIMULER MATCH
-
-
 	chpt1.jouerMatch(equipe5.ID,equipe2.ID);
 	chpt1.jouerMatch(equipe5.ID,equipe3.ID);
 	chpt1.jouerMatch(equipe5.ID,equipe4.ID);
@@ -143,9 +141,61 @@ int main()
 	chpt1.afficherClassement();
 
 
+	//FIN DU CHAMPIONNAT
+	chpt1.finChampionnat();
+
+    //AFFICHAGE DU PALMARES
+	equipe1.AfficherPalmares();
+	equipe2.AfficherPalmares();
+	equipe3.AfficherPalmares();
+	equipe4.AfficherPalmares();
+	equipe5.AfficherPalmares();
+
+
+    //NOUVELLE SAISON
+    Championnat chpt2("Coupe Stanley");
+
+
+    //AJOUTER EQUIPE AU CHAMPIONNAT
+    chpt2.AjouterEquipe(equipe1);
+	chpt2.AjouterEquipe(equipe2);
+	chpt2.AjouterEquipe(equipe3);
+	chpt2.AjouterEquipe(equipe4);
+	chpt2.AjouterEquipe(equipe5);
+
+
+	//AGENDER LES MATCHS
+    chpt2.AgenderMatch();
+
+
+    //JOUER MATCH
+	chpt2.jouerMatch(equipe5.ID,equipe2.ID);
+	chpt2.jouerMatch(equipe5.ID,equipe3.ID);
+	chpt2.jouerMatch(equipe5.ID,equipe4.ID);
+	chpt2.jouerMatch(equipe2.ID,equipe3.ID);
+	chpt2.jouerMatch(equipe2.ID,equipe4.ID);
+	chpt2.jouerMatch(equipe3.ID,equipe4.ID);
+
+	//AFFICHER MATCHS JOUES
+	chpt2.afficherMatchesJoues();
+
+	//AFFICHER CLASSEMENT
+	chpt2.afficherClassement();
+
+	//CLOTURE CHAMPIONNAT
+	chpt2.finChampionnat();
+
+
+    //AFFICHAGE DU PALMARES
+	equipe1.AfficherPalmares();
+	equipe2.AfficherPalmares();
+	equipe3.AfficherPalmares();
+	equipe4.AfficherPalmares();
+	equipe5.AfficherPalmares();
+
+
+
 	//EFFACER EQUIPE DU CHAMPIONNAT
-
-
 	chpt1.reinitialiser();
     return 0;
 }

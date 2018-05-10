@@ -19,9 +19,12 @@ class Championnat
         void AgenderMatch();
         void jouerMatch(short,short);
         void reinitialiser();
+        void finChampionnat();
+
         void afficherEquipes();
         void afficherMatchesJoues();
         void afficherClassement();
+
 
 
     protected:
@@ -31,7 +34,7 @@ class Championnat
         void computeClassement(Match&);
 
         string nom;
-        list<Equipe> listeEquipe;
+        list<Equipe*> listeEquipe;
         list<Match> listeMatch;
         string tabLieu[20];
 

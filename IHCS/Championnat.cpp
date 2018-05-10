@@ -39,7 +39,7 @@ void Championnat::AjouterEquipe(Equipe &e)
 {
     if (e.listeJoueur.size()== 5)
     {
-       this->listeEquipe.push_front(e);
+       this->listeEquipe.push_front(&e);
     }
     else
     {   cout << endl;
@@ -51,9 +51,9 @@ void Championnat::AjouterEquipe(Equipe &e)
 
 void Championnat::AgenderMatch()
 {
-    list<Equipe>::iterator it;
-    list<Equipe>::iterator it2;
-    list<Equipe>::iterator itTemp;
+    list<Equipe*>::iterator it;
+    list<Equipe*>::iterator it2;
+    list<Equipe*>::iterator itTemp;
     int i=0;
     int j= 0;
     for (it=listeEquipe.begin();it!=listeEquipe.end();it++)
@@ -63,7 +63,7 @@ void Championnat::AgenderMatch()
             itTemp++;
             for(it2 = itTemp ; it2!=listeEquipe.end() ; ++it2)
             {
-                Match m("Match"+i,(*it),(*it2));
+                Match m("Match"+i,(**it),(**it2));
                 m.Lieu = tabLieu[j];
                 listeMatch.push_front(m);
                 j++;
@@ -129,14 +129,14 @@ void Championnat::reinitialiser()
 void Championnat::afficherEquipes()
 {
     tools::afficherSeparation();
-    list<Equipe>::iterator it;
+    list<Equipe*>::iterator it;
 
     cout << endl;
     cout << "Equipes inscrites au championnat IHCS" <<endl;
     cout << endl;
     for (it=listeEquipe.begin();it!=listeEquipe.end();it++)
         {
-            cout    <<  "Equipe "   <<  it->ID   <<  " : " << it->nom <<endl;
+            cout    <<  "Equipe "   <<  (*it)->ID   <<  " : " << (*it)->nom <<endl;
         }
     tools::afficherSeparation();
 }
@@ -169,18 +169,30 @@ void Championnat::afficherClassement()
 
     cout << "Classement du championnat " << this->nom << ":" << endl;
     cout << endl;
-    list<Equipe>::iterator it;
+    list<Equipe*>::iterator it;
     int i=1;
     for(it = listeEquipe.begin();it!=listeEquipe.end();it++)
     {
-        cout << i <<" : " <<it->nom << " : " << it->getPointEquipe()<<endl;
-        if (i==1)
-        {
-            it->palmares.push_front(this->nom);
-        }
-
+        cout << i <<" : " <<(*it)->nom << " : " << (*it)->getPointEquipe()<<endl;
         i++;
     }
+
     cout << endl;
     tools::afficherSeparation();
+}
+void Championnat::finChampionnat()
+{
+    list<Equipe*>::iterator it;
+    int i=1;
+    for(it = listeEquipe.begin();it!=listeEquipe.end();it++)
+    {
+        (*it)->setPointEquipe(0);
+
+        if (i==1)
+            {
+                (*it)->palmares.push_front(this->nom);
+            }
+        i++;
+    }
+
 }

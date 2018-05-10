@@ -10,7 +10,7 @@ class tools
 {
     public:
         static double RandomScore(int niveau);
-        static bool Compare(Equipe First, Equipe Next);
+        static bool Compare(Equipe *&First, Equipe *&Next);
         static void afficherSeparation();
 };
 

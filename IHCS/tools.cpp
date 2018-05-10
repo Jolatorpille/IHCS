@@ -14,10 +14,10 @@ double tools::RandomScore(int niveau)
     return (int)((niveau/(double)10)*(rand()/(double)RAND_MAX));
 }
 
-bool tools::Compare(Equipe First, Equipe Next)
+bool tools::Compare(Equipe *&First, Equipe *&Next)
 {
 
-    return First.getPointEquipe()>=Next.getPointEquipe();
+    return First->getPointEquipe()>=Next->getPointEquipe();
 
 }
 void tools::afficherSeparation()
